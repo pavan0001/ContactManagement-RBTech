@@ -64,28 +64,78 @@
 
 <body>
     <div class="reg">
-    <form action="register.html">
+    <form name="f1" action="register.html">
     <h2>Registration Form</h2>
 
-    <input type="text"  name="name" placeholder="enter name" ><br>
+    <input type="text"  name="name1" placeholder="enter name" ><br>
     
     <input type="password" name="pass1"  placeholder="enter password" ><br>
     
-    <input type="password" name="pass2"  placeholder="confirm password" onsubmit="valid()" ><br>
+    <input type="password" name="pass2"  placeholder="confirm password" ><br>
 
     <input type="number" name="phno" placeholder="enter phone number" ><br>
   
-    <input type="email" name="pass" placeholder="enter email" ><br><br>
+    <input type="email" name="mail" placeholder="enter email" ><br><br>
 
-    <input id="11" type="submit" value="REGISTER" onclick="a()">
+    <input id="11" type="submit" value="REGISTER" onclick="alertmessage(document.f1.name1);phonenumber(document.f1.phno);passvalid(document.f1.pass1,8,12);passmatch(document.f1.pass1,document.f1.pass2)">
     </form>
     </div>
     <script type="text/javascript">
        
-        function a()
+        function alertmessage(inputtxt) 
         {
-             alert("enter the name");
+            var v=inputtxt.value;
+             alert("enter name is "+v);
         }
+
+
+    function phonenumber(inputtxt)
+    {
+
+         var phoneno = /^\d{10}$/;
+         if(inputtxt.value.match(phoneno))
+        {
+             return inputtxt.value;
+        }
+        else
+        {
+             alert("Not a valid Phone Number");
+            return false;
+        }
+    }
+    function passvalid(inputtxt,min,max)
+    {
+        var l=inputtxt.value;
+        m=min;
+        n=max;
+
+        if(l.length<m || l.length>n)
+        {
+            alert("enter valid password correctly")
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+
+    }
+    function passmatch(input1,input2)
+    {
+        var m=input1.value;
+        var n=input2.value;
+
+        if(m.match(n))
+        {
+            return true;
+        }
+        else
+        {
+            alert("passwords do not match" );
+            return false;
+        }
+    } 
+
 
     </script>
 </body>

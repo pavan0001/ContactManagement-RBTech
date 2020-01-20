@@ -1,6 +1,6 @@
     body
     {
-      background-color: deepskyblue;
+      background-color: rgb(33, 190, 251);
     }
     .login
     {
@@ -13,41 +13,67 @@
      position:absolute;
      transform:translate(-50%,-50%);
      text-align:center;
+     box-shadow:0px 0px 3px 3px rgb(22, 146, 195);
     }
-    button
+    /*button
     {
     left:260px;
     margin:10px;
-    color:deepskyblue;
-    border-color:deepskyblue;
+    color: deepskyblue;
     background-color:#fff;
     margin-bottom: 20px;
     margin-left: 180px;
     margin-top: 30px;
-    border-color: deepskyblue;
-	}
+    border:1px deepskyblue;
+    outline: none;
+    }*/
+    button
+    {
+        color: rgb(33, 190, 251);
+        background-color: #fff;
+        margin-bottom: 20px;
+        margin-left: 180px;
+        margin-top: 30px;
+        outline: none;
+        border: 1px solid rgb(33, 190, 251);
+        font-family: Times New Roman;
+    }
     label
     {
     color:black;
     text-align:left;
     padding: 20px;
     }
-    .login input[type="text"], input[type="password"]
+    .login input[type="text"]
     {
         margin-top: 10px;
         width: 75%;
         height:35px;
+        border:1px solid gainsboro;
+        background-color:rgb(242, 242, 242);
+       
+    }
+    input[type="password"]
+    {
+        margin-top: 1px;
+        width: 75%;
+        height:35px;
+        border:1px solid gainsboro;
+        background-color:rgb(242, 242, 242);
     }
     .login input[type="submit"]
     {
-        width:75%;
-        height: 35px;
-        background-color: deepskyblue;
+        width:76%;
+        height: 10%;
+        background-color: rgb(33, 190, 251);
         color: white;
         margin: 10px;
         height: 30px;
         text-align: center;
         border: none;
+        padding: 3px;
+        font-family: Times New Roman;
+        border-radius: 3px;
     }
     img
     {
@@ -55,4 +81,5 @@
         height: 60px;
         align-items: center;
         margin-bottom: 10px;
+        
     }
