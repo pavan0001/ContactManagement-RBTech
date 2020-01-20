@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>REGISTER PAGE</title>
+    <link rel="text/javascript" href="login.js">
+    <style>
+    body
+    {
+      background-color: deepskyblue;
+    }
+    .reg
+    {
+     width:320px;
+     height:420px;
+     background:#fff;
+     color:white;
+     top:50%;
+     left:50%;
+     position:absolute;
+     transform:translate(-50%,-50%);
+     text-align:center;
+    }
+    button
+    {
+    left:260px;
+    margin:10px;
+    color:deepskyblue;
+    border-color:deepskyblue;
+    background-color:#fff;
+    margin-bottom: 20px;
+    margin-left: 180px;
+    margin-top: 30px;
+    border-color: deepskyblue;
+	}
+    .reg input[type="text"], input[type="password"],input[type="email"],input[type="number"]
+    {
+        margin-top: 10px;
+        width: 75%;
+        height:35px;
+    }
+    .reg input[type="number"]
+    {
+        -moz-appearance: textfield;
+    }
+    .reg input[type="submit"]
+    {
+        width:75%;
+        height: 35px;
+        background-color: deepskyblue;
+        color: white;
+        margin: 10px;
+        height: 30px;
+        text-align: center;
+        border: none;
+    }
+    h2{
+        color:black;
+    }
+
+    </style>
+</head>
+
+
+
+<body>
+    <div class="reg">
+    <form action="register.html">
+    <h2>Registration Form</h2>
+
+    <input type="text"  name="name" placeholder="enter name" ><br>
+    
+    <input type="password" name="pass1"  placeholder="enter password" ><br>
+    
+    <input type="password" name="pass2"  placeholder="confirm password" onsubmit="valid()" ><br>
+
+    <input type="number" name="phno" placeholder="enter phone number" ><br>
+  
+    <input type="email" name="pass" placeholder="enter email" ><br><br>
+
+    <input id="11" type="submit" value="REGISTER" onclick="a()">
+    </form>
+    </div>
+    <script type="text/javascript">
+       
+        function a()
+        {
+             alert("enter the name");
+        }
+
+    </script>
+</body>
+</html>
