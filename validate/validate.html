@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration page</title>
+    <style>
+        h2{color: blueviolet; text-align: center;}
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <input type="text" placeholder="enter the name"><br>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+function validateform()
+    {
+       var ename=document.f1.name1.value;
+       var pas1=document.f1.pass1.value;
+       var pas2=document.f1.pass2.value;
+       var phn=document.f1.phno.value;
+       var mail=document.f1.mail.value;
+        if(ename == null || ename == "")
+        {
+            document.getElementById("n1").innerHTML="enter the name";
+            return false;
+        }
+        if(pas1 == null || pas1 == "")
+        {
+            document.getElementById("n2").innerHTML="enter the password";
+            return false;
+        }
+        if(pas2 == null || pas2 == "")
+        {
+            document.getElementById("n3").innerHTML="enter the password";
+            return false;
+        }
+        if(phn == null || phn == "")
+        {
+            document.getElementById("n4").innerHTML="enter the phone number";
+            return false;
+        }
+        if(mail == null || mail == "")
+        {
+            document.getElementById("n5").innerHTML="enter the Email Id";
+            return false;
+        }
+        
+    }

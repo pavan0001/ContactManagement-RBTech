@@ -19,6 +19,7 @@
      position:absolute;
      transform:translate(-50%,-50%);
      text-align:center;
+     box-shadow: 0px 0px 3px 3px rgb(22, 146, 195);
     }
     button
     {
@@ -37,9 +38,12 @@
         margin-top: 10px;
         width: 75%;
         height:35px;
+        border:1px solid gainsboro;
+        background-color:rgb(242, 242, 242);
     }
     .reg input[type="number"]
     {
+        
         -moz-appearance: textfield;
     }
     .reg input[type="submit"]
@@ -65,27 +69,38 @@
 <body>
     <div class="reg">
     <form name="f1" action="register.html">
-    <h2>Registration Form</h2>
+    <h2 style="color: rgb(33, 190, 251);">Registration Form</h2>
 
-    <input type="text"  name="name1" placeholder="enter name" ><br>
+    <input type="text"  name="name1" placeholder="   enter name" ><br>
+    <span id="n1" style="color:red; " ></span>
     
-    <input type="password" name="pass1"  placeholder="enter password" ><br>
+    <input type="password" name="pass1"  placeholder="   enter password" ><br>
+    <span id="n2" style="color:red; " ></span>
+    <input type="password" name="pass2"  placeholder="   confirm password" ><br>
+    <span id="n3" style="color:red; " ></span>
+    <input type="number" name="phno" placeholder="   enter phone number" ><br>
+    <span id="n4" style="color:red; " ></span>
+    <input type="email" name="mail" placeholder="   enter email" ><br><br>
+    <span id="n5" style="color:red; " ></span>
+    <input id="11" type="submit" value="REGISTER" onclick="alertmessage(document.f1.name1);phonenumber(document.f1.phno);passvalid(document.f1.pass1,8,12);passmatch(document.f1.pass1,document.f1.pass2)  
+    ">
     
-    <input type="password" name="pass2"  placeholder="confirm password" ><br>
-
-    <input type="number" name="phno" placeholder="enter phone number" ><br>
-  
-    <input type="email" name="mail" placeholder="enter email" ><br><br>
-
-    <input id="11" type="submit" value="REGISTER" onclick="alertmessage(document.f1.name1);phonenumber(document.f1.phno);passvalid(document.f1.pass1,8,12);passmatch(document.f1.pass1,document.f1.pass2)">
+   
     </form>
     </div>
     <script type="text/javascript">
-       
-        function alertmessage(inputtxt) 
+      function alertmessage(inputtxt) 
         {
             var v=inputtxt.value;
-             alert("enter name is "+v);
+            if(v.length==0)
+            {
+                alert("enter the name");
+            }
+            else
+            {
+                alert("enter name is "+v);
+            }
+            
         }
 
 
@@ -96,6 +111,11 @@
          if(inputtxt.value.match(phoneno))
         {
              return inputtxt.value;
+        }
+        else if(phoneno.length==0)
+        {
+            alert("enter the phone number");
+
         }
         else
         {
@@ -134,9 +154,7 @@
             alert("passwords do not match" );
             return false;
         }
-    } 
-
-
+    }
     </script>
 </body>
 </html>
