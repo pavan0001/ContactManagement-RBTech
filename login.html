@@ -9,25 +9,21 @@
 <body>
     <div class="login">
    
-    <button> SIGN UP </button><br>
+    <button action="register.html"> SIGN UP </button><br>
     
     <img src="1.png" alt="profile"><br>
     
     <label style="color: rgb(84, 84, 120); margin-bottom: 10px;">Drupal8</label><br>
     
-    <input type="text" id="1"  name="name" placeholder="   Username" style="font-size: 12px;color: black; font-weight: 500;" ><br>
+    <input type="text" id="1"  name="name" placeholder="Username" style="font-size: 12px;color: black; font-weight: 500;text-indent: 10px;" ><br>
     <div id="ename"></div>
-    <input type="password" id="2" name="pass" placeholder="   Password" style="font-size: 12px; color: black;" ><br>
+    <input type="password" id="2" name="pass" placeholder="Password" style="font-size: 12px; color: black;text-indent: 10px;" ><br>
     <div id="epasd"></div>
     <input type="submit" value="LOGIN TO ACCOUNT" style="font-weight: 1000;font-size: 12px;height: 45px;" onclick="return login()"><br><br>
 
     <label name="1" style="color:rgb(180, 180, 180);margin-top: 24px; font-size: 14px; font-weight: 500;">Forget password? <a href="#" style="text-decoration: none; margin-top: 24px; color: rgb(33, 190, 251); font-size: 14px; font-weight: 500;">Click here</a></label>
 
     <script>
-        function perror(evar,mesg)
-        {
-            document.getElementById("evar").innerHTML=mesg;
-        }
         function login()
         {
             var name1=document.getElementById("1").value;
@@ -36,32 +32,53 @@
 
             if(name1=="")
             {
-                perror("ename","enter the name");
-
+                document.getElementById("ename").innerHTML='<font color="red";>enter the name </font>';
+                
             }
             else
             {
                 var reg=/^[a-zA-Z\s]+$/;
                 if(reg.test(name1)===false)
                 {
-                    perror("ename","enter the valid name");
+                    document.getElementById("ename").innerHTML='<font color="red";>enter the valid name</font>';
+
                 }
                 else
                 {
-                    perror("ename","")
+                    document.getElementById("ename").innerHTML="";
+                 
                     ename=false;
                 }
             }
-            
-            
-
-
+            if(pas1=="")
+            {
+                document.getElementById("epasd").innerHTML='<font color="red";>enter the password </font>';
+               
+            }
+            else
+            {
+                var reg=/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+                if(reg.test(pas1)===false)
+                {
+                    document.getElementById("epasd").innerHTML='<font color="red";>enter the valid password</font>';
+                    
+                }
+                else
+                {
+                    document.getElementById("epasd").innerHTML="";
+                    epasd=false;
+                }
+            }
+            if(epasd==true || ename==true)
+            {
+                login();
+            }
+            else
+            {
+                window.location.href='register.html';
+            }
         }
-
-        
-
     </script>
-    
     </div>
 </body>
 </html>
