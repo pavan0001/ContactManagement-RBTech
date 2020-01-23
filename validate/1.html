@@ -5,8 +5,9 @@
 <title>JavaScript Form validation</title>
 <link rel="stylesheet" href="/examples/css/form-style.css">
 <script>
-// Defining a function to display error message
-function printError(elemId, hintMsg) {
+
+function printError(elemId, hintMsg)
+{
     document.getElementById(elemId).innerHTML = hintMsg;
 }
 
@@ -24,7 +25,8 @@ function validateForm()
     {
         printError("nameErr", "Please enter your name");
     }
-    else {
+    else 
+    {
         var regex = /^[a-zA-Z\s]+$/;                
         if(regex.test(name) === false) 
         {
