@@ -24,9 +24,9 @@
             user-select: none;
             outline: none;
         }
-        .divcontainer >div
-        {
-            margin-top: 5px ;
+
+        .divcontainer>div {
+            margin-top: 5px;
             margin-left: 8px;
             margin-right: 15px;
             padding: 3px;
@@ -37,8 +37,8 @@
 </head>
 
 <body>
-    <div class="divcontainer" id="txt1" style="font-size: 20px;display: flex; flex-direction: column-reverse;" ></div>
-   
+    <div class="divcontainer" id="txt1" style="font-size: 20px;display: flex; flex-direction: column-reverse;"></div>
+
     <div class="txt" style=" position: fixed; bottom: 15px;">
         <input type="text" name="num" id="num">
 
@@ -99,7 +99,7 @@
 
 
     <script>
-        var a=[]
+        var a = []
         function intnum(val) {
             document.getElementById("num").value += val
         }
@@ -107,18 +107,19 @@
             let x = document.getElementById("num").value
             let y = eval(x)
             a.push(x)
-        
-        var ele=document.createElement("div")
-        var newvalue = a.map(function(item) { 
-        ele.innerHTML=item+ "="+ eval(item)
-        document.getElementById("txt1").appendChild(ele)})
+
+            var ele = document.createElement("div")
+            var newvalue = a.map(function (item) {
+                ele.innerHTML = item + "=" + eval(item)
+                document.getElementById("txt1").appendChild(ele)
+            })
 
 
-       /* var newvalue = a.map(function(item) { 
-            //console.log(item+ eval(item))
-            return item+ "="+ eval(item); 
-        }) 
-        console.log(newvalue) */
+            /* var newvalue = a.map(function(item) { 
+                 //console.log(item+ eval(item))
+                 return item+ "="+ eval(item); 
+             }) 
+             console.log(newvalue) */
 
             document.getElementById("num").value = y;
             //document.getElementById("1").innerHTML=x+"="+y
@@ -128,18 +129,18 @@
         }
 
         function sqrt() {
-             
-                var number = document.getElementById("num").value;
-                var ans = Math.sqrt(number);
-                if (number < 0) ans = "Invalid";
-                document.getElementById("num").value = ans;
 
-                document.getElementById("1").innerHTML = number + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp=&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ans
+            var number = document.getElementById("num").value;
+            var ans = Math.sqrt(number);
+            if (number < 0) ans = "Invalid";
+            document.getElementById("num").value = ans;
 
-            }
-            //var val = document.getElementById("num").value;
-            //document.getElementById("num").value = Math.sqrt(val.length-1);
-        
+            document.getElementById("1").innerHTML = number + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp=&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ans
+
+        }
+        //var val = document.getElementById("num").value;
+        //document.getElementById("num").value = Math.sqrt(val.length-1);
+
         function pow() {
             var val = document.getElementById("num").value;
             document.getElementById("num").value = value.pow(value, 2)
