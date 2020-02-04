@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="DisplayContacts.css">
+   
+    </head>
+
+<body>
+    
+    <div class="displayContactsDiv" >
+        <table class="contactsTable" style="display: flex;">
+            <th class="displayContactsth">
+                <b>
+                <div class="flexcontainer">
+                    <div1 >PHOTO</div1>
+                    <div2 >FIRST NAME</div2>
+                    <div3 >LAST NAME</div3>
+                    <div4 >PHONE</div4>
+                    <div5 >EMAIL</div5>
+                    <div6 >COMPANY</div6>
+                </div>
+                </b>
+
+            </th>
+            <tr>
+                <td><button class="contactButton" type="button">
+                    <div class="flexcontainer">
+                        <div1 id="imgid"></div1>
+                        <div2 id="fnameid"></div2>
+                        <div3 id="lnameid"></div3>
+                        <div4 id="phoneid"></div4>
+                        <div5 id="emailid"></div5>
+                        <div6 id="compid"></div6>
+                    </div>
+                </button>
+            </td>
+            </tr>
+            
+        </table>
+    </div>
+    <input type="image" src="AddContacts.png" class="AddContactsImg" onclick="addContact()"></input>
+    <script src="DisplayContacts.js"> </script>
+</body>
